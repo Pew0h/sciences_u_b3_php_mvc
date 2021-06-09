@@ -3,7 +3,9 @@
     "description": "PHP7 MVC App example",
     "type": "project",
     "require": {
-        "doctrine/orm": "^2.8"
+        "doctrine/orm": "^2.8",
+        "symfony/dotenv": "^5.3",
+        "twig/twig": "3.0"
     },
     "scripts" : {
         "start" : "php -S localhost:8000 -t public/ public/index.php"
