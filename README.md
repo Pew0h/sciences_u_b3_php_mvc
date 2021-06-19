@@ -17,7 +17,7 @@ $router->addPath(
 );
 ```
 
-### Exemple d'une routeavec paramètre dynamique
+### Exemple d'une route avec paramètre dynamique
 ```php
 $router->addPath(
   '/contact/edit/{id}/{name}',
