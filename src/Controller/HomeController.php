@@ -10,20 +10,21 @@ class HomeController extends AbstractController
   // Ici, j'ai une dépendance envers l'entity manager
   public function index(EntityManager $em)
   {
-    $user = new User();
-    $user->setName("Bob");
+    
+    //$user = new User();
+    //$user->setName("Bob");
 
     // Persist permet uniquement de dire au gestionnaire d'entités de gérer l'entité passée en paramètre
     // Persist ne déclenche pas automatiquement une insertion
-    $em->persist($user);
+    //$em->persist($user);
     // Pour déclencher l'insertion, on doit appeler la méthode "flush" sur le gestionnaire d'entités
-    $em->flush();
+    //$em->flush();
 
-    echo $this->twig->render('index.html.twig', ['user' => $user]);
+    echo $this->twig->render('index.html.twig');
   }
 
-  public function contact()
+  public function contact(EntityManager $em, $id, $name)
   {
-    echo $this->twig->render('contact.html.twig', ['title' => 'Contact']);
+    echo $this->twig->render('contact.html.twig', ['id' => $id, 'name' => $name]);
   }
 }

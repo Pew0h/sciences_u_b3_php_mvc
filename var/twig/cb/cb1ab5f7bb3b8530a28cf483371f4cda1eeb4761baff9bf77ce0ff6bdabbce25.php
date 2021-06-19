@@ -49,11 +49,7 @@ class __TwigTemplate_76ff3310addfaa99528c949086597c546e8ff7e584a0455b35ea33ca104
         // line 4
         echo "\t<h1>Welcome</h1>
 \t<p>
-\t\t";
-        // line 6
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, ($context["user"] ?? null), "name", [], "any", false, false, false, 6), "html", null, true);
-        echo "
-\t\ta bien été enregistré.
+\t\tCoucou bienvenue sur notre super site
 \t</p>
 ";
     }
@@ -70,7 +66,7 @@ class __TwigTemplate_76ff3310addfaa99528c949086597c546e8ff7e584a0455b35ea33ca104
 
     public function getDebugInfo()
     {
-        return array (  54 => 6,  50 => 4,  46 => 3,  35 => 1,);
+        return array (  50 => 4,  46 => 3,  35 => 1,);
     }
 
     public function getSourceContext()
@@ -80,8 +76,7 @@ class __TwigTemplate_76ff3310addfaa99528c949086597c546e8ff7e584a0455b35ea33ca104
 {% block body %}
 \t<h1>Welcome</h1>
 \t<p>
-\t\t{{ user.name }}
-\t\ta bien été enregistré.
+\t\tCoucou bienvenue sur notre super site
 \t</p>
 {% endblock %}
 ", "index.html.twig", "C:\\Users\\burl4\\Desktop\\ESGI - cours\\PHP - MVC\\Semestre 2\\MVC\\templates\\index.html.twig");

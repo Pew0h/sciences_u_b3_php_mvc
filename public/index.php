@@ -53,6 +53,7 @@ $twig = new Environment($loader, [
   'cache' => __DIR__ . '/../var/twig',
 ]);
 
+// LISTES DES ROUTES
 $router = new Router($entityManager, $twig);
 $router->addPath(
   '/',
@@ -61,12 +62,23 @@ $router->addPath(
   HomeController::class,
   'index'
 );
+
 $router->addPath(
-  '/contact',
+  '/index',
+  RequestMethod::GET,
+  'home2',
+  HomeController::class,
+  'index'
+);
+
+$router->addPath(
+  '/contact/edit/{id}/{name}',
   RequestMethod::GET,
   'contact',
   HomeController::class,
   'contact'
 );
 
-$router->execute($_SERVER['REQUEST_URI'], $_SERVER['REQUEST_METHOD']);
+// Sinon impossible de lancer la commande php vendor/bin/doctrine
+if(php_sapi_name() != 'cli')
+  $router->execute($_SERVER['REQUEST_URI'], $_SERVER['REQUEST_METHOD']);

@@ -54,6 +54,15 @@ class __TwigTemplate_442dcb514dd142cce14198b252a31f422d2855db0a66d2f92333d666022
   <textarea name=\"message\" id=\"message\" cols=\"30\" rows=\"10\"></textarea>
   <button type=\"submit\">Envoyer</button>
 </form>
+Valeur ID: ";
+        // line 10
+        echo twig_escape_filter($this->env, ($context["id"] ?? null), "html", null, true);
+        echo "
+<br>
+Valeur name: ";
+        // line 12
+        echo twig_escape_filter($this->env, ($context["name"] ?? null), "html", null, true);
+        echo "
 ";
     }
 
@@ -69,7 +78,7 @@ class __TwigTemplate_442dcb514dd142cce14198b252a31f422d2855db0a66d2f92333d666022
 
     public function getDebugInfo()
     {
-        return array (  49 => 2,  35 => 1,);
+        return array (  64 => 12,  59 => 10,  49 => 2,  35 => 1,);
     }
 
     public function getSourceContext()
@@ -83,6 +92,9 @@ class __TwigTemplate_442dcb514dd142cce14198b252a31f422d2855db0a66d2f92333d666022
   <textarea name=\"message\" id=\"message\" cols=\"30\" rows=\"10\"></textarea>
   <button type=\"submit\">Envoyer</button>
 </form>
+Valeur ID: {{ id }}
+<br>
+Valeur name: {{ name }}
 {% endblock %}
 
 ", "contact.html.twig", "C:\\Users\\burl4\\Desktop\\ESGI - cours\\PHP - MVC\\Semestre 2\\MVC\\templates\\contact.html.twig");
